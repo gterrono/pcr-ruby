@@ -1,4 +1,4 @@
-require 'classes/resource'
+require 'pcr/resource'
 
 module PCR
   class Review

@@ -1,5 +1,5 @@
-require 'classes/resource'
-require 'classes/section'
+require 'pcr/resource'
+require 'pcr/section'
 
 module PCR
   class Course

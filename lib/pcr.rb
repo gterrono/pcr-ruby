@@ -1,6 +1,6 @@
 require 'json'
 require 'open-uri'
-require 'classes/coursehistory'
+require 'pcr/coursehistory'
 
 #PCR class handles token and api url, so both are easily changed
 module PCR
