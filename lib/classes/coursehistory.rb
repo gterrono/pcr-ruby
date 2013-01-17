@@ -1,4 +1,5 @@
 require 'classes/resource'
+require 'classes/course'
 
 module PCR
   class CourseHistory

@@ -1,4 +1,5 @@
 require 'classes/resource'
+require 'classes/review'
 
 module PCR
   class Section
