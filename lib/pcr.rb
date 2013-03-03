@@ -1,5 +1,6 @@
 require 'json'
 require 'open-uri'
+require 'pcr/department'
 require 'pcr/coursehistory'
 
 #PCR class handles token and api url, so both are easily changed
@@ -14,6 +15,7 @@ module PCR
 
     def get_json(path)
       #TODO: Error handling for bad/no token
+      raise ArgumentError.new 'Token was not set' unless @token
       JSON.parse(open("#{@api_endpt + path}?token=#{@token}").read)
     end
 
@@ -26,7 +28,7 @@ module PCR
     end
 
     def dept(code)
-      raise NotImplementedError.new("Departments have not yet been implemented.")
+      Department.new code
     end
   end
 
