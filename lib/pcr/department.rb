@@ -6,7 +6,7 @@ module PCR
     include PCR::Resource
     attr_reader :name, :coursehistories, :id, :path, :retrieved, :valid, :version
     
-    def initialize(course_code)
+    def initialize(name)
       @name = name
       
       # Read JSON from PCR API
@@ -26,8 +26,11 @@ module PCR
       # Aggregate ratings across all coursehistories
       total, num = 0, 0
       coursehistories.each do |c|
-        total += c.average(metric).to_f
-        num += 1
+        av = c.average(metric).to_f
+        if av != -1
+          total += av
+          num += 1
+        end
       end
       
       # Return average value across all sections

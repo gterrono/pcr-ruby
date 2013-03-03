@@ -27,7 +27,7 @@ module PCR
       raise NotImplementedError.new("Instructors have not yet been implemented.")
     end
 
-    def dept(code)
+    def department(code)
       Department.new code
     end
   end

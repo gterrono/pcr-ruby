@@ -53,6 +53,8 @@ module PCR
           end
         end
       end
+
+      return -1 if num == 0
       
       # Return average value across all sections
       total / num

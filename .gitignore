@@ -22,4 +22,5 @@ examples.rb
 json_responses.txt
 
 *.swp
-token.rb
+helper.rb
+test
